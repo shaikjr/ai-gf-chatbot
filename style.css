@@ -1,0 +1,137 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(
+    135deg,
+    #f06,
+    #f06,
+    #90f
+  ); /* Pink to Purple gradient */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+  color: #ffcc00; /* Gold */
+  margin-bottom: 10px;
+  font-size: 2.2em;
+}
+
+.subtitle {
+  color: #ccc;
+  font-style: italic;
+  margin-top: -10px;
+  margin-bottom: 25px;
+}
+
+.status-area {
+  margin-bottom: 25px;
+  font-size: 1.1em;
+  color: #eee;
+}
+
+#statusMessage {
+  font-weight: bold;
+  color: #fff;
+}
+
+#startButton {
+  background-color: #00bcd4; /* Cyan */
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#startButton:hover:not(:disabled) {
+  background-color: #0097a7; /* Darker Cyan */
+  transform: translateY(-2px);
+}
+
+#startButton:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.chat-log {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.chat-log h2 {
+  color: #ffcc00;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.output-log {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 15px;
+  max-height: 300px;
+  overflow-y: auto;
+  color: #fff;
+  font-size: 0.95em;
+  line-height: 1.6;
+  text-align: left; /* Ensure text alignment for log messages */
+}
+
+.output-log p {
+  margin: 5px 0;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.output-log p:nth-child(even) {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.05
+  ); /* Slightly different background for alternating messages */
+}
+
+/* Scrollbar styles for output-log */
+.output-log::-webkit-scrollbar {
+  width: 8px;
+}
+
+.output-log::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.output-log::-webkit-scrollbar-thumb {
+  background: #00bcd4;
+  border-radius: 10px;
+}
+
+.output-log::-webkit-scrollbar-thumb:hover {
+  background: #0097a7;
+}
